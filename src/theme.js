@@ -1,10 +1,15 @@
-import { createTheme } from '@mui/material/styles';
-
-import { red } from "@mui/material/colors";
+import { createTheme } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
 
 export const theme = createTheme({
   palette: {
-    main: red,
+    primary: {
+      main: blue[100],
+    },
+  },
+  myButton: {
+    backgroundColor: "red",
+    color: "white",
+    border: "1px solid black",
   },
 });
-
