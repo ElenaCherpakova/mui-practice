@@ -7,6 +7,6 @@ const useStyles = makeStyles((theme) => ({
 export default function RightBar() {
   const classes = useStyles();
   return (
-    <div></div>
+    <div>Elena</div>
   );
 }

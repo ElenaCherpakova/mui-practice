@@ -27,11 +27,19 @@ const useStyles = makeStyles(() => ({
     width: "50%",
     [theme.breakpoints.down("sm")]: {
       display: (props) => (props.open ? "flex" : "none"),
+      width: "50%",
     },
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     "&:hover": {
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
+  },
+  cancel: {
+    marginLeft: theme.spacing(2),
+    // Styles will be applies to screen sizes from "sm" and up
+    // [theme.breakpoints.up("sm")]: <-- { this doesn't work
+    //   display: "none",
+    // },
   },
   input: {
     color: "white",
@@ -66,7 +74,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
   return (
-    <AppBar>
+    <AppBar position="static">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
           Elena Cherpakova
@@ -77,11 +85,19 @@ export default function NavBar() {
         <div className={classes.search}>
           <Search />
           <InputBase placeholder="Search..." className={classes.input} />
-          <CancelIcon className={classes.cancel} />
+          <CancelIcon
+            sx={{
+              display: { sm: "none", md: "none", lg: "none" },
+            }}
+            className={classes.cancel}
+            onClick={() => setOpen(false)}
+          />
         </div>
         <div className={classes.icons}>
           <Search
-            sx={{ display: { xs: "block", lg: "none" } }}
+            sx={{
+              display: { sm: "none", md: "none", lg: "none" },
+            }}
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
