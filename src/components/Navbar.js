@@ -16,6 +16,7 @@ import { theme } from "../theme";
 
 const useStyles = makeStyles(() => ({
   toolbar: {
+    backgroundColor: theme.palette.primary.main,
     display: "flex",
     justifyContent: "space-between",
   },
