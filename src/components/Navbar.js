@@ -10,7 +10,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
-
+import { useState } from "react";
 import { theme } from "../theme";
 
 const useStyles = makeStyles(() => ({
@@ -24,6 +24,9 @@ const useStyles = makeStyles(() => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
     width: "50%",
+    [theme.breakpoints.down("sm")]: {
+      display: (props) => (props.open ? "flex" : "none"),
+    },
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     "&:hover": {
       backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -45,6 +48,9 @@ const useStyles = makeStyles(() => ({
       display: "none",
     },
   },
+  searchButton: {
+    marginRight: theme.spacing(2),
+  },
   icons: {
     display: "flex",
     alignItems: "center",
@@ -56,7 +62,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function NavBar() {
-  const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const classes = useStyles({ open });
   return (
     <AppBar>
       <Toolbar className={classes.toolbar}>
@@ -71,6 +78,10 @@ export default function NavBar() {
           <InputBase placeholder="Search..." className={classes.input} />
         </div>
         <div className={classes.icons}>
+          <Search
+            className={classes.searchButton}
+            onClick={() => setOpen(true)}
+          />
           <Badge badgeContent={4} color="secondary" className={classes.badge}>
             <MailIcon />
           </Badge>
