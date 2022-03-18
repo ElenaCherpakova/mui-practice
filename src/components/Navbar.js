@@ -10,6 +10,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import CancelIcon from "@mui/icons-material/Cancel";
 import { useState } from "react";
 import { theme } from "../theme";
 
@@ -48,15 +49,15 @@ const useStyles = makeStyles(() => ({
       display: "none",
     },
   },
-  searchButton: {
-    marginRight: theme.spacing(2),
-  },
+
   icons: {
-    display: "flex",
     alignItems: "center",
-    color: "white",
+    display: (props) => (props.open ? "none" : "flex"),
   },
   badge: {
+    marginRight: theme.spacing(2),
+  },
+  searchButton: {
     marginRight: theme.spacing(2),
   },
 }));
@@ -76,9 +77,11 @@ export default function NavBar() {
         <div className={classes.search}>
           <Search />
           <InputBase placeholder="Search..." className={classes.input} />
+          <CancelIcon className={classes.cancel} />
         </div>
         <div className={classes.icons}>
           <Search
+            sx={{ display: { xs: "block", lg: "none" } }}
             className={classes.searchButton}
             onClick={() => setOpen(true)}
           />
