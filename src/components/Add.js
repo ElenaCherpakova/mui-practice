@@ -140,7 +140,7 @@ export default function Add() {
                 onClick={() => setOpenAlert(true)}
                 variant="outlined"
                 color="primary"
-                style={{ marginRight: 10 }}
+                style={{ marginRight: 20 }}
               >
                 Create
               </Button>
@@ -155,21 +155,20 @@ export default function Add() {
           </form>
         </Container>
       </Modal>
-    
-        <Snackbar
-          open={openAlert}
-          autoHideDuration={3000}
-          onClose={handleClose}
-        >
-          <Alert
-            onClose={handleClose}
-            severity="success"
-            sx={{ width: "100%" }}
-          >
-            This is a success message!
-          </Alert>
-        </Snackbar>
-    
+
+      <Snackbar
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        open={openAlert}
+        autoHideDuration={3000}
+        onClose={handleClose}
+      >
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+          This is a success message!
+        </Alert>
+      </Snackbar>
     </>
   );
 }
