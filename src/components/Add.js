@@ -1,3 +1,4 @@
+import * as React from "react";
 import { makeStyles } from "@mui/styles";
 import Tooltip from "@mui/material/Tooltip";
 import Fab from "@mui/material/Fab";
@@ -11,8 +12,15 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
 import { useState } from "react";
 import { theme } from "../theme";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const useStyles = makeStyles(() => ({
   fab: {
@@ -21,7 +29,7 @@ const useStyles = makeStyles(() => ({
     right: 10,
   },
   container: {
-    width: 500,
+    width: 300,
     height: 550,
     backgroundColor: "white",
     position: "absolute",
@@ -35,11 +43,26 @@ const useStyles = makeStyles(() => ({
       height: "100vh",
     },
   },
+  form: {
+    padding: theme.spacing(2),
+  },
+  item: {
+    marginBottom: theme.spacing(3),
+  },
 }));
 
 export default function Add() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [openAlert, setOpenAlert] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenAlert(false);
+  };
 
   return (
     <>
@@ -114,6 +137,7 @@ export default function Add() {
             </div>
             <div className={classes.item}>
               <Button
+                onClick={() => setOpenAlert(true)}
                 variant="outlined"
                 color="primary"
                 style={{ marginRight: 10 }}
@@ -131,6 +155,21 @@ export default function Add() {
           </form>
         </Container>
       </Modal>
+    
+        <Snackbar
+          open={openAlert}
+          autoHideDuration={3000}
+          onClose={handleClose}
+        >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            This is a success message!
+          </Alert>
+        </Snackbar>
+    
     </>
   );
 }
