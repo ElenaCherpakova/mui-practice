@@ -16,9 +16,6 @@ export default function Feed() {
     <Container className={classes.container}>
       <Post />
       <Post />
-      <Post />
-      <Post />
-      <Post />
     </Container>
   );
 }

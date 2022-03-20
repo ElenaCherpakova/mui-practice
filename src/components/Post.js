@@ -16,7 +16,10 @@ const useStyles = makeStyles(() => ({
     paddingTop: theme.spacing(10),
   },
   media: {
-    height: "450px",
+    height: 450,
+    [theme.breakpoints.down("sm")]: {
+      height: 240,
+    },
   },
   card: {
     marginBottom: theme.spacing(5),
@@ -25,6 +28,7 @@ const useStyles = makeStyles(() => ({
 
 export default function Post() {
   const classes = useStyles();
+
   return (
     <Card className={classes.card}>
       <CardActionArea>
@@ -35,7 +39,9 @@ export default function Post() {
           title="Alberta/Lake Moraine"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5">Alberta / Moraine Lake</Typography>
+          <Typography gutterBottom variant="h5">
+            Alberta / Moraine Lake
+          </Typography>
           <Typography variant="body2">
             Moraine Lake is a glacially fed lake in Banff National Park, 14
             kilometres outside the village of Lake Louise, Alberta, Canada. It

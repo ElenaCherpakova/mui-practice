@@ -2,6 +2,7 @@ import NavBar from "./components/Navbar";
 import LeftBar from "./components/LeftBar";
 import RightBar from "./components/RightBar";
 import Feed from "./components/Feed";
+import Add from "./components/Add";
 import Grid from "@mui/material/Grid";
 import { makeStyles } from "@mui/styles";
 import { theme } from "./theme";
@@ -30,6 +31,7 @@ function App() {
           <RightBar />
         </Grid>
       </Grid>
+      <Add />
     </div>
   );
 }
