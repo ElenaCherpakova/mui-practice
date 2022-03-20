@@ -24,10 +24,10 @@ function App() {
           <LeftBar />
         </Grid>
         <Grid item sm={7} xs={10}>
-          <RightBar />
+          <Feed />
         </Grid>
         <Grid item sm={3} className={classes.right}>
-          <Feed />
+          <RightBar />
         </Grid>
       </Grid>
     </div>
