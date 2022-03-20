@@ -35,8 +35,8 @@ export default function Post() {
           title="Alberta/Lake Moraine"
         />
         <CardContent>
-          <Typography variant="h5">Alberta / Moraine Lake</Typography>
-          <Typography variant="body">
+          <Typography gutterBottom variant="h5">Alberta / Moraine Lake</Typography>
+          <Typography variant="body2">
             Moraine Lake is a glacially fed lake in Banff National Park, 14
             kilometres outside the village of Lake Louise, Alberta, Canada. It
             is situated in the Valley of the Ten Peaks, at an elevation of

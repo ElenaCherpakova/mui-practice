@@ -19,6 +19,8 @@ const useStyles = makeStyles(() => ({
     backgroundColor: theme.palette.primary.main,
     display: "flex",
     justifyContent: "space-between",
+
+
   },
   search: {
     display: "flex",
@@ -75,7 +77,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
   const classes = useStyles({ open });
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar className={classes.toolbar}>
         <Typography variant="h6" className={classes.logoLg}>
           Elena Cherpakova
