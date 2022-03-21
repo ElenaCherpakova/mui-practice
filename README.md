@@ -27,3 +27,8 @@ Desktop Version
 * Learnt how to setup and use the Material-UI library in the React application
 * Implementation Grid, Form, Navbar Modal, and other components.
 * Styling and make the application responsive
+
+## Dependencies
+
+* React
+* Materiul UI
