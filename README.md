@@ -23,7 +23,7 @@ Desktop Version
   
 # Running the project
 * Clone the repository onto your local device.
-* Install dependencies using the npm install command in the folder of the projet.
+* Install dependencies using the `npm install` command in the folder of the projet.
 * Start the web server using the npm start command. The app will be served at http://localhost:3000/
 * Go to http://localhost:3000/ in your browser.
 
