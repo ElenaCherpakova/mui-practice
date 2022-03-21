@@ -1,5 +1,8 @@
 # Material UI Responsive Project 
 
+## Screenshots
+
+!["front-page"](https://github.com/ElenaCherpakova/mui-practice/blob/46c39dc1c51d9da86ea1bb5be2ffc16a5e6ccd18/public/photos/photoOne.png)
 
 # Running the project
 * Clone the repository onto your local device.
