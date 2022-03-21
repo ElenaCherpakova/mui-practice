@@ -1,5 +1,11 @@
 # Material UI Responsive Project 
 
+## What Has Been Learnt
+
+* Learnt how to setup and use the Material-UI library in the React application
+* Implementation Grid, Form, Navbar Modal, and other components.
+* Styling and make the application responsive
+
 ## Screenshots
 
 Desktop Version
@@ -22,11 +28,6 @@ Desktop Version
 * Go to http://localhost:3000/ in your browser.
 
 
-## What Has Been Learnt
-
-* Learnt how to setup and use the Material-UI library in the React application
-* Implementation Grid, Form, Navbar Modal, and other components.
-* Styling and make the application responsive
 
 ## Dependencies
 
