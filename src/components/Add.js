@@ -14,7 +14,7 @@ import FormLabel from "@mui/material/FormLabel";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-
+import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import { theme } from "../theme";
 
@@ -25,8 +25,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const useStyles = makeStyles(() => ({
   fab: {
     position: "fixed",
-    bottom: 10,
-    right: 10,
+    bottom: 200,
+    [theme.breakpoints.up("sm")]: {
+      bottom: 135,
+    },
   },
   container: {
     width: 300,
@@ -66,11 +68,20 @@ export default function Add() {
 
   return (
     <>
-      <Tooltip title="Add" aria-label="add" onClick={() => setOpen(true)}>
-        <Fab className={classes.fab} color="secondary">
-          <AddIcon />
-        </Fab>
-      </Tooltip>
+      <Grid
+        item
+        container
+        xs={6}
+        alignItems="flex-end"
+        direction="column"
+       
+      >
+        <Tooltip title="Add" aria-label="add" onClick={() => setOpen(true)}>
+          <Fab className={classes.fab} color="secondary">
+            <AddIcon />
+          </Fab>
+        </Tooltip>
+      </Grid>
       <Modal open={open}>
         <Container className={classes.container}>
           <form className={classes.form} autocomplete="off">

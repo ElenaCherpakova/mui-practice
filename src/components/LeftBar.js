@@ -17,24 +17,24 @@ const useStyles = makeStyles(() => ({
   container: {
     height: "100vh",
     color: "white",
-    paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(15),
     backgroundColor: theme.palette.primary.main,
     position: "sticky",
-    top:45,
+    top: 0,
+  
     [theme.breakpoints.up("sm")]: {
       backgroundColor: "white",
-      color: "black",
-      border: "1px solid #ece7e7",
+      color: "#555",
     },
   },
   item: {
     display: "flex",
     alignItems: "center",
-    marginLeft: "10px",
+    marginLeft: "15px",
     marginBottom: theme.spacing(4),
     [theme.breakpoints.up("sm")]: {
       marginBottom: theme.spacing(3),
-      cursor: "Pointer",
+      cursor: "pointer",
     },
   },
   text: {
