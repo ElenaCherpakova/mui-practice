@@ -1,8 +1,8 @@
 # Material UI Responsive Project 
 
-## What Has Been Learnt
+## What I Learnt
 
-* Learnt how to setup and use the Material-UI library in the React application
+* How to setup and use the Material-UI library in the React application
 * Implementation Grid, Form, Navbar Modal, and other components.
 * Styling and make the application responsive
 
