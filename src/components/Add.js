@@ -28,6 +28,7 @@ const useStyles = makeStyles(() => ({
     bottom: 200,
     [theme.breakpoints.up("sm")]: {
       bottom: 135,
+
     },
   },
   container: {
@@ -71,7 +72,7 @@ export default function Add() {
       <Grid
         item
         container
-        xs={6}
+        xs={7}
         alignItems="flex-end"
         direction="column"
        
