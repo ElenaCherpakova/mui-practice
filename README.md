@@ -5,10 +5,10 @@
 !["front-page"](https://github.com/ElenaCherpakova/mui-practice/blob/46c39dc1c51d9da86ea1bb5be2ffc16a5e6ccd18/public/photos/photoOne.png)
 !["front-pageTwo"](https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoTwo.png)
 
-<div display="flex">
+<p float="left">
   !["mobile-version"](https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionTwo.png)
   !["mobile-versionTwo"](https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionOne.png)
-  </div>
+  </p>
   
 # Running the project
 * Clone the repository onto your local device.
