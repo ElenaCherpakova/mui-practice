@@ -7,7 +7,7 @@
 
 
 
-<img src="https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionTwo.png" width="385"/> <img src="https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionOne.png" width="355"/> 
+<img src="https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionTwo.png" width="384"/> <img src="https://github.com/ElenaCherpakova/mui-practice/blob/f71c227eeac048c2858d02f958e18dfeda8b0ef2/public/photos/photoMobileVersionOne.png" width="355"/> 
 
  
   
