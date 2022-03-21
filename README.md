@@ -31,4 +31,4 @@ Desktop Version
 ## Dependencies
 
 * React
-* Materiul UI
+* Material UI
